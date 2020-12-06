@@ -1,0 +1,36 @@
+<template>
+<Layout>
+  <div class="cat-hero">
+    <div class="_1200 top">
+      <h1 class="heading smaller center">probably not the best beer in the world</h1>
+    </div>
+  </div>
+  <div>
+    <div class="cat">
+      <div class="cat-box">
+        <a href="#" class="cat-tab pick">Original</a>
+        <a href="#" class="cat-tab">Light</a>
+        <a href="#" class="cat-tab">Red</a>
+      </div>
+      <div class="items-wrap">
+        <product/>
+        <product/>
+        <product/>
+        <product/>
+        <product/>
+        <product/>
+        <product/>
+        <product/>
+        <product/>
+      </div>
+    </div>
+  </div>
+</Layout>
+</template>
+
+<script>
+import product from '../components/product'
+export default {
+  components:{product}
+}
+</script>
