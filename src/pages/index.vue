@@ -8,9 +8,18 @@
     </div>
     <div class="items-sec">
       <div class="_1200 items">
-    <product/>
-    <product/>
-    <product/>
+        <product />
+        <product />
+        <product />
+      </div>
+    </div>
+    <newsletter />
+    <div class="blog-sec">
+      <h2 class="smaller-head">Blog</h2>
+      <div class="under-head-line"></div>
+      <div class="blogs-wrap">
+        <blog-box />
+        <blog-box />
       </div>
     </div>
   </Layout>
@@ -18,8 +27,10 @@
 
 
 <script>
-import product from '../components/product.vue'
+import blogBox from "../components/blog-box";
+import Newsletter from "../components/newsletter.vue";
+import product from "../components/product.vue";
 export default {
-  components:{product}
-}
+  components: { product, blogBox, Newsletter },
+};
 </script>
