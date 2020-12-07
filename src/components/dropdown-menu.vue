@@ -1,43 +1,44 @@
 <template>
   <div data-hover="" data-delay="0" class="dropdown">
-    <dropdown :title="'Categories'"></dropdown>
-    <nav class="dropdown-list">
-      <div class="tabs">
-        <div class="tabs-menu">
-          <a
-            v-for="(tab, i) in tabs"
-            :key="i"
-            class="tab-link"
-            @mouseover="activeTab = tab"
-          >
-            {{ tab.title }}
-          </a>
-        </div>
-        <div class="tabs-content w-tab-content">
-          <div v-if="activeTab" class="">
+    <dropdown :title="'Categories'">
+      <nav class="dropdown-list">
+        <div class="tabs">
+          <div class="tabs-menu">
             <a
-              href="#"
-              class="menu-items-wrap"
-              v-for="(product, i) in activeTab.products"
+              v-for="(tab, i) in tabs"
               :key="i"
+              class="tab-link"
+              @mouseover="activeTab = tab"
             >
-              <div class="items-flex">
-                <div class="menu-item">
-                  <img :src="product.image" alt="" class="menu-item-image" />
-                  <div class="item-txt-box">
-                    <p class="item-price">
-                      <span class="small-price">$</span>{{ product.price }}
-                    </p>
-                    <p class="item-name-menu">{{ product.title }}</p>
-                  </div>
-                </div>
-              </div>
-              <p class="view-more">View More</p>
+              {{ tab.title }}
             </a>
           </div>
+          <div class="tabs-content w-tab-content">
+            <div v-if="activeTab" class="">
+              <a
+                href="#"
+                class="menu-items-wrap"
+                v-for="(product, i) in activeTab.products"
+                :key="i"
+              >
+                <div class="items-flex">
+                  <div class="menu-item">
+                    <img :src="product.image" alt="" class="menu-item-image" />
+                    <div class="item-txt-box">
+                      <p class="item-price">
+                        <span class="small-price">$</span>{{ product.price }}
+                      </p>
+                      <p class="item-name-menu">{{ product.title }}</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="view-more">View More</p>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </dropdown>
   </div>
 </template>
 

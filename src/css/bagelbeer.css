@@ -65,10 +65,9 @@
   float: left;
 }
 
-.dropdown{
+.dropdown {
   position: absolute;
   /* overflow: hidden; */
-  width: 100px;
   height: 50px;
   top: 26px;
   margin-left: 20px;
@@ -84,13 +83,13 @@
   position: relative;
 }
 
-.dropdown-list{
+.dropdown-list {
   height: 0;
   overflow: hidden;
- transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.dropdown-list.open {
+.dropdown-list {
   height: auto;
   position: absolute;
   border-radius: 20px;
@@ -181,7 +180,6 @@
   line-height: 1.5;
   font-weight: 700;
   margin: 0;
-
 }
 
 .item-price {
@@ -244,13 +242,13 @@
   margin-left: auto;
 }
 
-.form-done{
+.form-done {
   display: none;
   font-size: 22px;
   line-height: 1.5;
   font-weight: 700;
 }
-.form-fail{
+.form-fail {
   display: none;
   color: red;
 }
@@ -267,16 +265,16 @@
   font-weight: 600;
 }
 
-input{
+input {
   display: block;
-    width: 100%;
-    height: 38px;
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
 }
 
 .text-field:focus {
@@ -296,7 +294,7 @@ input{
   text-align: center;
   border: 1px solid #ffc60b;
   font-family: Montserrat, sans-serif;
-font-weight: 600;
+  font-weight: 600;
 }
 .btn:focus {
   outline: none;
@@ -676,7 +674,7 @@ font-weight: 600;
   overflow: hidden;
   margin: 10px;
 }
-.small-txt{
+.small-txt {
   margin-bottom: 30px;
 }
 
@@ -942,19 +940,6 @@ margin-bottom: 40px;
   font-style: normal;
   font-display: swap;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * {
   -webkit-box-sizing: border-box;
