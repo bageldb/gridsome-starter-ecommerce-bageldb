@@ -32,9 +32,9 @@
                     </div>
                   </div>
                 </div>
-                <p class="view-more">View More</p>
               </a>
             </div>
+            <p class="view-more">View More</p>
           </div>
         </div>
       </nav>
