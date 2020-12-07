@@ -100,6 +100,7 @@
 }
 
 .tab-link {
+  cursor: pointer;
   display: block;
   padding: 14px;
   border-radius: 6px;
@@ -500,6 +501,7 @@ font-weight: 600;
 }
 
 .menu-items-wrap {
+  display: inline-block;
   margin: 10px;
   color: #000;
   text-align: center;
