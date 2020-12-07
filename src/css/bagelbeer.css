@@ -67,7 +67,7 @@
 
 .dropdown{
   position: absolute;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100px;
   height: 50px;
   top: 26px;
@@ -85,14 +85,18 @@
 }
 
 .dropdown-list{
-  position: absolute;
+  height: 0;
+  overflow: hidden;
+ transition: all 0.2s ease;
 }
 
 .dropdown-list.open {
+  height: auto;
   position: absolute;
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.12);
+  z-index: 99;
 }
 
 .tab-link {
