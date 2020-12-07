@@ -52,6 +52,22 @@
         </div>
       </div>
     </div>
+    <div class="blog-sec">
+     <h2 class="smaller-head">Blog</h2>
+     <div class="under-head-line"></div>
+     <div class="blogs-wrap"> 
+        <div class="blog-box">
+          <img class="blog-img" src="/images/1-red-p-500.jpeg"/>
+            <p class="blog-big-txt">blog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog text</p>
+          <p class="blog-txt">blog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog text</p>
+          </div>
+        <div class="blog-box">
+          <img class="blog-img" src="/images/1-red-p-500.jpeg"/>
+            <p class="blog-big-txt">blog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog text</p>
+          <p class="blog-txt">blog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog textblog text blog text blog text blog text</p>
+          </div>
+     </div>
+    </div>
     <footer class="footer">
       <img src="images/logo.svg" loading="lazy" alt="" class="footer-logo" />
       <p>
