@@ -1,8 +1,8 @@
 <template>
   <div class="body">
     <header class="header">
-     <div class="top-bar w-clearfix">
-        <g-link to="/" class="logo-wrap w-inline-block"
+     <div class="top-bar">
+        <g-link to="/" class="logo-wrap"
           ><img src="images/logo.svg" loading="lazy" alt="" class="logo"
         /></g-link>
         <dropdown-menu/>
@@ -11,7 +11,7 @@
     </header>
     <slot/>
      <div class="sign-wrap">
-      <div class="signup w-form">
+      <div class="signup">
         <form
           id="email-form"
           name="email-form"
@@ -22,7 +22,7 @@
           <p class="paragraph">to get no samples at all</p>
           <input
             type="text"
-            class="text-field w-input"
+            class="text-field"
             maxlength="256"
             name="name"
             data-name="Name"
@@ -30,7 +30,7 @@
             id="name"
           /><input
             type="email"
-            class="text-field w-input"
+            class="text-field"
             maxlength="256"
             name="email"
             data-name="Email"
@@ -44,10 +44,10 @@
             class="btn"
           />
         </form>
-        <div class="w-form-done">
+        <div class="form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
-        <div class="w-form-fail">
+        <div class="form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
       </div>
@@ -78,5 +78,5 @@ export default {
 </script>
 
 <style>
-  @import '/css/bagelbeer.css';
+  @import '../css/bagelbeer.css';
 </style>
