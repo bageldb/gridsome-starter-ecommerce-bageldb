@@ -3,14 +3,10 @@
     <img class="blog-img" :src="image" />
     <div class="white-card">
       <p class="blog-big-txt">
-        blog text blog text blog text blog textblog text blog text blog text
-        blog textblog text blog text blog text blog textblog text blog text blog
-        text blog text
+        {{ title }}
       </p>
       <p class="blog-txt">
-        blog text blog text blog text blog textblog text blog text blog text
-        blog textblog text blog text blog text blog textblog text blog text blog
-        text blog text
+        {{ description }}
       </p>
     </div>
   </div>

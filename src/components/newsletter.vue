@@ -34,7 +34,7 @@
         />
       </form>
       <div class="form-done">
-        <div>Thank you! Your submission has been received!</div>
+        <div>Awesome! You're signed up!</div>
       </div>
       <div class="form-fail">
         <div>Oops! Something went wrong while submitting the form.</div>

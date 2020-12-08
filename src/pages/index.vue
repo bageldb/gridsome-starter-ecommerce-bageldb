@@ -2,7 +2,7 @@
   <Layout>
     <div class="hero">
       <div class="_1200 top">
-        <img src="images/2701.png" loading="lazy" alt="" class="main-img" />
+        <img src="images/2701.png" alt="" class="main-img" />
         <h1 class="heading">Tastes better after a Pint</h1>
       </div>
     </div>
@@ -21,11 +21,22 @@
       <h2 class="smaller-head">Blog</h2>
       <div class="under-head-line"></div>
       <div class="blogs-wrap">
-        <blog-box image="/images/hops.jpeg" />
-        <blog-box image="/images/typesofbeer.jpeg" />
+        <blog-box
+          image="/images/hops.jpeg"
+          :title="'Why hops are the key for a good brew'"
+          :description="'Chuck Berry will walk you through the different hop variaties'"
+        />
+        <blog-box
+          image="/images/typesofbeer.jpeg"
+          :title="`Mix'em up for me - the best stoutes around`"
+          :description="'Chuck Berry will walk you through the different hop variaties'"
+        />
       </div>
       <div class="blogs-vertical">
-        <blog-box-vertical image="/images/smiling.jpg" />
+        <blog-box-vertical
+          image="/images/smiling.jpg"
+          :title="'Which brew to choose when there are many'"
+        />
         <blog-box-vertical image="/images/types.jpg" />
         <blog-box-vertical image="/images/hops.jpeg" />
       </div>
@@ -37,11 +48,10 @@
 <script>
 import blogBox from "../components/blog-box";
 import BlogBoxVertical from "../components/blog-box-vertical.vue";
-import BlogBox from "../components/blog-box.vue";
 import Newsletter from "../components/newsletter.vue";
-import product from "../components/product.vue";
+import product from "../components/product-card";
 export default {
-  components: { product, blogBox, Newsletter, BlogBox, BlogBoxVertical },
+  components: { product, blogBox, Newsletter, BlogBoxVertical },
 };
 </script>,
     
