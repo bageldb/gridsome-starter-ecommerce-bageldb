@@ -1,10 +1,14 @@
 <template>
-  <div class="dropdown-wrap" @mouseover="open = true">
+  <div class="dropdown-wrap" @mouseover="openDropdown()">
     <p class="dropdown-title">
       {{ title }}
-      <span class="arrow-down">›</span>
+      <span class="arrow-down" :class="{ open: open }">›</span>
     </p>
-    <div class="dropdown-list-wrap" v-if="open" v-click-outside="() => (open = fals)">
+    <div
+      class="dropdown-list-wrap"
+      :class="{ open: open, preopen: preopen }"
+      v-click-outside="closeDropdown"
+    >
       <slot />
     </div>
   </div>
@@ -15,7 +19,17 @@ export default {
   name: "dropdown",
   props: { title: String },
   data() {
-    return { open: false };
+    return { open: false, preopen: false };
+  },
+  methods: {
+    openDropdown() {
+      this.preopen = true;
+      setTimeout(() => (this.open = true), 50);
+    },
+    closeDropdown() {
+      this.open = false;
+      setTimeout(() => (this.preopen = false), 50);
+    },
   },
 };
 </script>
@@ -25,11 +39,34 @@ export default {
   display: inline-block;
   padding: 5px;
   transform: rotate(90deg);
+  transition: all 0.2s ease;
 }
-.dropdown-wrap{
+.arrow-down.open {
+  transform: rotate(-90deg);
+}
+.dropdown-wrap {
   display: inline-block;
-  position: absolute
+  position: absolute;
 }
+.dropdown-list-wrap {
+  display: none;
+  z-index: 2;
+}
+.dropdown-list-wrap.preopen {
+  display: block;
+  opacity: 0;
+  bottom: -10px;
+  transition: 0.2s ease-in-out;
+}
+.dropdown-list-wrap.open {
+  opacity: 1;
+
+  bottom: 0;
+}
+.dropdown-title {
+  cursor: pointer;
+}
+
 .dropdown {
   top: 26px;
   margin-left: 20px;
@@ -39,11 +76,11 @@ export default {
   height: 10px;
   position: relative;
 }
-.dropdown-title{
+.dropdown-title {
   display: inline-block;
   padding: 10px;
 }
-.dropdown-list-wrap{
+.dropdown-list-wrap {
   position: relative;
 }
 
@@ -57,5 +94,4 @@ export default {
   left: 0;
   top: -10px;
 }
-
 </style>

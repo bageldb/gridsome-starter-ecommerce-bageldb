@@ -2,23 +2,13 @@
   <div data-hover="" data-delay="0" class="dropdown">
     <dropdown :title="'Categories'">
       <nav class="dropdown-list">
-        <div class="tabs">
-          <div class="tabs-menu">
-            <a
-              v-for="(tab, i) in tabs"
-              :key="i"
-              class="tab-link"
-              @mouseover="activeTab = tab"
-            >
-              {{ tab.title }}
-            </a>
-          </div>
-          <div class="tabs-content w-tab-content">
-            <div v-if="activeTab" class="">
+        <tabs>
+          <tab name="Services" :selected="true">
+            <div>
               <a
                 href="#"
                 class="menu-items-wrap"
-                v-for="(product, i) in activeTab.products"
+                v-for="(product, i) in products"
                 :key="i"
               >
                 <div class="items-flex">
@@ -35,8 +25,14 @@
               </a>
             </div>
             <p class="view-more">View More</p>
-          </div>
-        </div>
+          </tab>
+          <tab class="tab-link" name="Pricing">
+            <h1>How much we do it for</h1>
+          </tab>
+          <tab class="tab-link" name="About Us">
+            <h1>Why we do it</h1>
+          </tab>
+        </tabs>
       </nav>
     </dropdown>
   </div>
@@ -44,12 +40,18 @@
 
 <script>
 import Dropdown from "./dropdown.vue";
+import tabs from "../components/tabs/tabs";
+import tab from "../components/tabs/tab";
 export default {
   name: "dropdown-menu",
-  components: { Dropdown },
+  components: { Dropdown, tabs, tab },
   data() {
     return {
       activeTab: {},
+      products: [
+        { title: "Red", image: "images/1-red.jpg", price: 23 },
+        { title: "Blue", image: "images/1-red.jpg", price: 123 },
+      ],
       tabs: [
         {
           title: "Original",
@@ -60,10 +62,6 @@ export default {
         },
         {
           title: "Light",
-          products: [
-            { title: "Red", image: "images/1-red.jpg", price: 23 },
-            { title: "Blue", image: "images/1-red.jpg", price: 123 },
-          ],
         },
         {
           title: "Red",
@@ -77,3 +75,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.dropdown-list {
+  width: 90vw;
+  max-width: 640px;
+}
+</style>

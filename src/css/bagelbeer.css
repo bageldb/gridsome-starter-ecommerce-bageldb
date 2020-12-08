@@ -76,6 +76,8 @@
   border-radius: 6px;
   background-color: transparent;
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .tab-link.current {
@@ -92,7 +94,7 @@
 .tabs-content {
   display: inline-block;
 }
-.tabs-content > div{
+.tabs-content > div {
   display: flex;
 }
 
@@ -374,7 +376,16 @@ input {
 .cart.close {
   right: -100%;
 }
-
+.white-card {
+  box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px 30px;
+  margin: auto;
+  position: relative;
+  margin-top: -45px;
+}
 .cart-head {
   text-align: center;
 }
@@ -649,17 +660,25 @@ input {
   margin-bottom: 30px;
 }
 
-.blog-sec{
+.blog-sec {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
   margin-top: 60px;
 }
-.blogs-wrap{
-text-align: center;
+.blogs-wrap {
+  text-align: center;
+  width: 69%;
+  display: inline-block;
+  vertical-align: top;
 }
-.blog-box{
+.blogs-vertical {
+  margin-left: 1%;
+  width: 30%;
+  display: inline-block;
+}
+.blog-box {
   vertical-align: top;
   min-width: 300px;
   width: 48%;
@@ -668,21 +687,20 @@ text-align: center;
   margin-right: 1%;
   margin-bottom: 30px;
 }
-.under-head-line{
-width: 100px;
-height: 2px;
-background: #ffc60b;
-margin-left: auto;
-margin-right: auto;
-margin-top: -20px;
-margin-bottom: 40px;
+.under-head-line {
+  width: 100px;
+  height: 2px;
+  background: #ffc60b;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+  margin-bottom: 40px;
 }
-.blog-img{
-  height: 300px;
+.blog-img {
+  height: 250px;
   /* border: 1px solid black; */
   width: 100%;
   object-fit: cover;
-  box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
 }
 .ellipsis {
@@ -690,7 +708,7 @@ margin-bottom: 40px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.blog-big-txt{
+.blog-big-txt {
   text-align: start;
   font-weight: 600;
   font-size: 20px;
@@ -704,7 +722,7 @@ margin-bottom: 40px;
   text-overflow: ellipsis;
   margin-bottom: 10px;
 }
-.blog-txt{
+.blog-txt {
   text-align: start;
   line-height: 1.5;
   display: block;
@@ -716,8 +734,8 @@ margin-bottom: 40px;
   text-overflow: ellipsis;
 }
 @media screen and (max-width: 991px) {
-  .blog-img{
-  height: 26vw;
+  .blog-img {
+    height: 26vw;
   }
 
   .heading {
@@ -745,9 +763,9 @@ margin-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
-  .blog-img{
+  .blog-img {
     height: 180px;
-    }
+  }
   ._1200.items {
     text-align: center;
   }

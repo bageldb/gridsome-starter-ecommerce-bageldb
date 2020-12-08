@@ -31,7 +31,7 @@ query {
 
 <script>
 import cart from "../components/cart";
-import DropdownMenu from "../components/dropdown-menu.vue";
+import DropdownMenu from "../components/menu.vue";
 export default {
   components: { cart, DropdownMenu },
 };
