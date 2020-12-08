@@ -2,11 +2,6 @@
   <div class="blog-box vertical">
     <img class="blog-img" :src="image" />
     <div class="white-card">
-      <p class="blog-big-txt">
-        blog text blog text blog text blog textblog text blog text blog text
-        blog textblog text blog text blog text blog textblog text blog text blog
-        text blog text
-      </p>
       <p class="blog-txt">
         blog text blog text blog text blog textblog text blog text blog text
         blog textblog text blog text blog text blog textblog text blog text blog
@@ -37,7 +32,7 @@ export default {
 }
 .blog-txt,
 .blog-big-txt {
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
 }
 .white-card {
   padding: 2px 20px;
@@ -46,4 +41,12 @@ export default {
   margin: auto;
   margin-left: -20px;
 }
+@media screen and (max-width: 479px) {
+.white-card {
+  padding: 2px 20px;
+  display: inline-block;
+  width: 96%;
+  margin: auto;
+  margin-left: 0px;
+}}
 </style>

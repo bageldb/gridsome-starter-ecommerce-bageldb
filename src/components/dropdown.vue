@@ -65,6 +65,8 @@ export default {
 }
 .dropdown-title {
   cursor: pointer;
+  display: inline-block;
+  padding: 10px;
 }
 
 .dropdown {
@@ -75,10 +77,6 @@ export default {
   background: red;
   height: 10px;
   position: relative;
-}
-.dropdown-title {
-  display: inline-block;
-  padding: 10px;
 }
 .dropdown-list-wrap {
   position: relative;
@@ -94,4 +92,8 @@ export default {
   left: 0;
   top: -10px;
 }
+@media screen and (max-width: 479px) {
+.dropdown-title {
+  padding: 4px;
+}}
 </style>

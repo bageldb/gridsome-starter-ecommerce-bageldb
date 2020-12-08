@@ -2,7 +2,9 @@
   font-family: Montserrat, sans-serif;
   color: #000;
 }
-
+.header{
+  height: 100px;
+}
 .hero {
   background-image: none;
   background-position: 0px 0px;
@@ -680,7 +682,7 @@ input {
 }
 .blog-box {
   vertical-align: top;
-  min-width: 300px;
+  min-width: 370px;
   width: 48%;
   display: inline-block;
   margin-left: 1%;
@@ -733,6 +735,22 @@ input {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 1279px) {
+  .blog-sec{
+    text-align: center;
+    max-width: 800px;
+  }
+  .blogs-wrap {
+    width: 100%;
+  }
+.blogs-vertical{
+    margin-left: 0%;
+    display: inline-block;
+    width: 91%;
+    text-align: center;
+    /* max-width: 400px; */
+}
+}
 @media screen and (max-width: 991px) {
   .blog-img {
     height: 26vw;
@@ -763,8 +781,17 @@ input {
 }
 
 @media screen and (max-width: 767px) {
+  .tabs-details{
+    display: none;
+  }
+  .white-card{
+    padding: 10px 20px;
+  }
   .blog-img {
-    height: 180px;
+    height: 220px;
+  }
+  .blog-big-txt{
+    margin-top: 10px;
   }
   ._1200.items {
     text-align: center;
@@ -869,9 +896,24 @@ input {
   .items-wrap {
     text-align: center;
   }
+  
+  .tabs-menu{
+    margin-left: 0px;
+  }  
 }
 
 @media screen and (max-width: 479px) {
+  .blog-box {
+    min-width: 0;
+    width: 96%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .white-card{
+    width: 90%;
+  }
   .main-img {
     margin-right: -15px;
     margin-left: 0px;

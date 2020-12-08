@@ -3,34 +3,119 @@
     <dropdown :title="'Categories'">
       <nav class="dropdown-list">
         <tabs>
-          <tab name="Services" :selected="true">
+          <tab name="Category 1" :selected="true">
             <div>
               <a
                 href="#"
                 class="menu-items-wrap"
-                v-for="(product, i) in products"
-                :key="i"
               >
                 <div class="items-flex">
                   <div class="menu-item">
-                    <img :src="product.image" alt="" class="menu-item-image" />
+                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
                     <div class="item-txt-box">
                       <p class="item-price">
-                        <span class="small-price">$</span>{{ product.price }}
+                        <span class="small-price">$</span>23
                       </p>
-                      <p class="item-name-menu">{{ product.title }}</p>
+                      <p class="item-name-menu">Blue</p>
                     </div>
                   </div>
                 </div>
               </a>
+                   <a
+                href="#"
+                class="menu-items-wrap"
+              >
+                <div class="items-flex">
+                  <div class="menu-item">
+                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
+                    <div class="item-txt-box">
+                      <p class="item-price">
+                        <span class="small-price">$</span>23
+                      </p>
+                      <p class="item-name-menu">Blue</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              
             </div>
             <p class="view-more">View More</p>
           </tab>
-          <tab class="tab-link" name="Pricing">
-            <h1>How much we do it for</h1>
+          <tab name="category 2">
+                          <div>
+              <a
+                href="#"
+                class="menu-items-wrap"
+              >
+                <div class="items-flex">
+                  <div class="menu-item">
+                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
+                    <div class="item-txt-box">
+                      <p class="item-price">
+                        <span class="small-price">$</span>23
+                      </p>
+                      <p class="item-name-menu">Blue</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+                   <a
+                href="#"
+                class="menu-items-wrap"
+              >
+                <div class="items-flex">
+                  <div class="menu-item">
+                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
+                    <div class="item-txt-box">
+                      <p class="item-price">
+                        <span class="small-price">$</span>23
+                      </p>
+                      <p class="item-name-menu">Blue</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              
+            </div>
+            <p class="view-more">View More</p>
           </tab>
-          <tab class="tab-link" name="About Us">
-            <h1>Why we do it</h1>
+          <tab   name="category 3">
+                         <div>
+              <a
+                href="#"
+                class="menu-items-wrap"
+              >
+                <div class="items-flex">
+                  <div class="menu-item">
+                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
+                    <div class="item-txt-box">
+                      <p class="item-price">
+                        <span class="small-price">$</span>23
+                      </p>
+                      <p class="item-name-menu">Blue</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+                   <a
+                href="#"
+                class="menu-items-wrap"
+              >
+                <div class="items-flex">
+                  <div class="menu-item">
+                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
+                    <div class="item-txt-box">
+                      <p class="item-price">
+                        <span class="small-price">$</span>23
+                      </p>
+                      <p class="item-name-menu">Blue</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              
+            </div>
+            <p class="view-more">View More</p>
           </tab>
         </tabs>
       </nav>
@@ -49,8 +134,7 @@ export default {
     return {
       activeTab: {},
       products: [
-        { title: "Red", image: "images/1-red.jpg", price: 23 },
-        { title: "Blue", image: "images/1-red.jpg", price: 123 },
+   
       ],
       tabs: [
         {
@@ -79,6 +163,15 @@ export default {
 <style scoped>
 .dropdown-list {
   width: 90vw;
-  max-width: 640px;
+  max-width: 440px;
+  height: auto;
 }
+@media screen and (max-width: 767px) {
+.dropdown-list {
+  max-width: 160px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+}
+
 </style>
