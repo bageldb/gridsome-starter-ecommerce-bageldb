@@ -9,11 +9,6 @@
     </div>
     <div>
       <div class="cat">
-        <div class="cat-box">
-          <a href="#" class="cat-tab pick">Original</a>
-          <a href="#" class="cat-tab">Light</a>
-          <a href="#" class="cat-tab">Red</a>
-        </div>
         <div class="items-wrap">
           <product />
           <product />

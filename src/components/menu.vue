@@ -5,117 +5,24 @@
         <tabs>
           <tab name="Category 1" :selected="true">
             <div>
-              <a
-                href="#"
-                class="menu-items-wrap"
-              >
-                <div class="items-flex">
-                  <div class="menu-item">
-                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
-                    <div class="item-txt-box">
-                      <p class="item-price">
-                        <span class="small-price">$</span>23
-                      </p>
-                      <p class="item-name-menu">Blue</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-                   <a
-                href="#"
-                class="menu-items-wrap"
-              >
-                <div class="items-flex">
-                  <div class="menu-item">
-                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
-                    <div class="item-txt-box">
-                      <p class="item-price">
-                        <span class="small-price">$</span>23
-                      </p>
-                      <p class="item-name-menu">Blue</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              
+              <product-small :price="21" />
+              <product-small :price="11" />
             </div>
-            <p class="view-more">View More</p>
+            <g-link to="/category" class="view-more">View More</g-link>
           </tab>
           <tab name="category 2">
-                          <div>
-              <a
-                href="#"
-                class="menu-items-wrap"
-              >
-                <div class="items-flex">
-                  <div class="menu-item">
-                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
-                    <div class="item-txt-box">
-                      <p class="item-price">
-                        <span class="small-price">$</span>23
-                      </p>
-                      <p class="item-name-menu">Blue</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-                   <a
-                href="#"
-                class="menu-items-wrap"
-              >
-                <div class="items-flex">
-                  <div class="menu-item">
-                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
-                    <div class="item-txt-box">
-                      <p class="item-price">
-                        <span class="small-price">$</span>23
-                      </p>
-                      <p class="item-name-menu">Blue</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              
+            <div>
+              <product-small :price="221" />
+              <product-small :price="41" />
             </div>
-            <p class="view-more">View More</p>
+            <g-link to="/category" class="view-more">View More</g-link>
           </tab>
-          <tab   name="category 3">
-                         <div>
-              <a
-                href="#"
-                class="menu-items-wrap"
-              >
-                <div class="items-flex">
-                  <div class="menu-item">
-                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
-                    <div class="item-txt-box">
-                      <p class="item-price">
-                        <span class="small-price">$</span>23
-                      </p>
-                      <p class="item-name-menu">Blue</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-                   <a
-                href="#"
-                class="menu-items-wrap"
-              >
-                <div class="items-flex">
-                  <div class="menu-item">
-                    <img src="images/1-red.jpg" alt="" class="menu-item-image" />
-                    <div class="item-txt-box">
-                      <p class="item-price">
-                        <span class="small-price">$</span>23
-                      </p>
-                      <p class="item-name-menu">Blue</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              
+          <tab name="category 3">
+            <div>
+              <product-small :price="29" />
+              <product-small :price="51" />
             </div>
-            <p class="view-more">View More</p>
+            <g-link to="/category" class="view-more">View More</g-link>
           </tab>
         </tabs>
       </nav>
@@ -127,15 +34,14 @@
 import Dropdown from "./dropdown.vue";
 import tabs from "../components/tabs/tabs";
 import tab from "../components/tabs/tab";
+import productSmall from "../components/product-small";
 export default {
   name: "dropdown-menu",
-  components: { Dropdown, tabs, tab },
+  components: { Dropdown, tabs, tab, productSmall },
   data() {
     return {
       activeTab: {},
-      products: [
-   
-      ],
+      products: [],
       tabs: [
         {
           title: "Original",
@@ -167,11 +73,10 @@ export default {
   height: auto;
 }
 @media screen and (max-width: 767px) {
-.dropdown-list {
-  max-width: 160px;
-  text-align: center;
-  padding-bottom: 10px;
+  .dropdown-list {
+    max-width: 160px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
 }
-}
-
 </style>
