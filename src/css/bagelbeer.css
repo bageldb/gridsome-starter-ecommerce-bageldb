@@ -149,8 +149,8 @@
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background-color: #fff;
-  -o-object-fit: scale-down;
-  object-fit: scale-down;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .item-name {

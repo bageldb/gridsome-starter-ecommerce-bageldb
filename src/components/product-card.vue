@@ -1,11 +1,14 @@
 <template>
   <div class="item">
-    <img src="/images/1-red-p-500.jpeg" class="item-image" />
+    <bgl-image :image="product.mainImageGallery[0]" class="item-image" />
+    <img />
     <div class="item-txt-box">
-      <p class="item-price"><span class="small-price">$</span>{{ price }}</p>
-      <p class="item-name">{{ title }}</p>
+      <p class="item-price">
+        <span class="small-price">$</span>{{ product.price }}
+      </p>
+      <p class="item-name">{{ product.title }}</p>
       <p class="small-txt">
-        {{ description }}
+        {{ product.description }}
       </p>
     </div>
     <g-link to="/product" class="btn-add">Add to Cart</g-link>
@@ -14,8 +17,13 @@
 
 
 <script>
+import bglImage from "./bgl-image.vue";
 export default {
+  components: { bglImage },
   name: "product",
-  props: { title: String, description: String, price: Number },
+  props: { product: Object },
+  mounted() {
+    console.log(this.product);
+  },
 };
 </script>

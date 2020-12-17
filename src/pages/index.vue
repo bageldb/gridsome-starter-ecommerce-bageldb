@@ -8,12 +8,8 @@
     </div>
     <div class="items-sec">
       <div class="_1200 items">
-        <product />
-        <product />
-        <product />
-        <product />
-        <product />
-        <product />
+        <product v-for="edge in $page.allProducts.edges" :key="edge.node._id" :product="edge.node" />
+
       </div>
     </div>
     <newsletter />
@@ -44,6 +40,23 @@
   </Layout>
 </template>
 
+<page-query>
+  query{
+    allProducts{
+      edges{
+        node{
+          _id
+          title
+          mainImageGallery{
+            imageURL
+            altText
+          }
+          price
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 import blogBox from "../components/blog-box";
@@ -53,5 +66,5 @@ import product from "../components/product-card";
 export default {
   components: { product, blogBox, Newsletter, BlogBoxVertical },
 };
-</script>,
+</script>
     
