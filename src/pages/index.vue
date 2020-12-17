@@ -2,14 +2,17 @@
   <Layout>
     <div class="hero">
       <div class="_1200 top">
-        <img src="images/2701.png" alt="" class="main-img" />
+        <g-img src="images/2701.png" alt="" class="main-img" />
         <h1 class="heading">Tastes better after a Pint</h1>
       </div>
     </div>
     <div class="items-sec">
       <div class="_1200 items">
-        <product v-for="edge in $page.allProducts.edges" :key="edge.node._id" :product="edge.node" />
-
+        <product
+          v-for="edge in $page.allProducts.edges"
+          :key="edge.node._id"
+          :product="edge.node"
+        />
       </div>
     </div>
     <newsletter />
