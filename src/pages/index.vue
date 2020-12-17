@@ -2,7 +2,7 @@
   <Layout>
     <div class="hero">
       <div class="_1200 top">
-        <g-img src="images/2701.png" alt="" class="main-img" />
+        <g-image src="/images/2701.png" alt="" class="main-img" />
         <h1 class="heading">Tastes better after a Pint</h1>
       </div>
     </div>
