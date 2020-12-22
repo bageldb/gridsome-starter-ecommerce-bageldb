@@ -1,7 +1,7 @@
 <template>
-  <Layout>
-    <div v-if="!orderStatus">
-      <div>
+  <div>
+    <div class="your-cart" v-if="!orderStatus">
+      <div  class="cart-data">
         <h1>Your Cart</h1>
         <div class="cart-item" v-for="(item, i) in distinctCartItems" :key="i">
           {{ item.title }}
@@ -9,26 +9,25 @@
           {{ item.price }}
         </div>
       </div>
-      <form @submit.prevent="submitCheckout">
+      <form   class="cart-order" @submit.prevent="submitCheckout">
         <label>
-          Name
-          <input type="name" v-model="order.name" />
+          
+          <input placeholder="Name" class="inputcheck" type="name" v-model="order.name" />
         </label>
         <label>
-          Email
-          <input type="email" v-model="order.email" />
+          
+          <input placeholder="Email" class="inputcheck" type="email" v-model="order.email" />
         </label>
         <label>
-          Address
-          <textarea v-model="order.address"> </textarea>
+          <textarea placeholder="Address" class="inputcheck" v-model="order.address"> </textarea>
         </label>
-        <input type="submit" value="Send Order" />
+        <input class="checkbtn" type="submit" value="Send Order" />
       </form>
     </div>
     <div v-if="orderStatus == 'Completed'">
       Awesome! good things are coming!!
     </div>
-  </Layout>
+  </div>
 </template>
 
 <script>
@@ -74,3 +73,5 @@ export default {
   },
 };
 </script>
+<style scoped>
+</style>

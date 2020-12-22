@@ -117,6 +117,13 @@
   font-family: Bagel, sans-serif;
   color: #fff;
   font-size: 23px;
+  position: fixed;
+  top:0;
+  right: 0;
+  font-family: Montserrat, sans-serif;
+}
+.icon-shop{
+  font-family: Bagel, sans-serif;
 }
 
 .shop:hover {
@@ -304,6 +311,7 @@ input {
 .item-txt-box {
   padding-right: 19px;
   padding-left: 19px;
+  height: 160px;
 }
 
 .btn-add {
@@ -317,6 +325,8 @@ input {
   transition: all 300ms ease;
   color: #fff;
   text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  border: none !important;
 }
 .item:hover .btn-add {
   opacity: 1;
@@ -401,12 +411,41 @@ input {
   font-size: 20px;
   text-decoration: none;
 }
+.cart-item-amount-wrap{
+display: flex;
+min-width: 100px;
+}
 .cart-item-amount {
-  width: 50px;
+  width: 30px;
+  padding: 0 0 0 12px;
+  border-radius: 5px;
+  text-align: center;
+  height: 30px;
+  margin: 0 2px;
+  box-sizing: unset;
+  border: none;
+  background: #f7f7f7;
+}
+.toggle-group{
+  display: flex;
+}
+.toggle{
+  width: 30px;
+  height: 30px;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  background: #ffc60b;
+  transition: 200ms all ease;
+}
+.toggle:hover{
+filter: brightness(90%);
 }
 .cart-item {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-top: 12px;
   padding-bottom: 10px;
@@ -428,6 +467,58 @@ input {
   font-size: 16px;
   font-weight: 900;
   margin-top: 0;
+}
+.total{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.your-cart{
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Montserrat, sans-serif;
+  margin-top: 60px;
+}
+.cart-order{
+  width: 400px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  background: #ffc60b;
+  text-align: center;
+}
+.cart-data{
+  
+}
+
+.inputcheck{
+  border-radius: 6px;
+  border: none;
+  margin: 10px 0 0 0;
+  width: 100%;
+  padding: 10px;
+  font-family: Montserrat, sans-serif;
+}
+.inputcheck:focus{
+outline: none;
+background: #f3f3f3;
+}
+.checkbtn{
+  margin-top: 10px;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  padding: 9px;
+  height: 45px;
+  border: 1px transparent solid;
+  cursor: pointer;
+  transition: 200ms all ease;
+}
+.checkbtn:hover{
+  box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
+  border: 1px white solid;
+
 }
 
 .smaller-cart {
@@ -976,7 +1067,7 @@ html {
 }
 body {
   margin: 0;
-  min-height: 100%;
+  /* min-height: 100%; */
   background-color: #fff;
 }
 img {

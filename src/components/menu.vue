@@ -37,8 +37,9 @@ query{
 
 <style scoped>
 .dropdown-list {
-  width: 90vw;
+  /* width: 90vw; */
   max-width: 440px;
+  padding: 0 30px;
   height: auto;
 }
 @media screen and (max-width: 767px) {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a @click="open = !open" class="shop">{{ cartItemCount }} </a>
+    <a @click="open = !open" class="shop">{{ cartItemCount }} <span class="icon-shop"></span></a>
     <div class="cart" :class="{ close: !open }">
       <a @click="open = !open" class="close-cart"></a>
       <h3 class="cart-head">Your Cart</h3>
@@ -12,20 +12,22 @@
             <span class="smaller-cart">$</span>{{ item.price }}
           </p>
         </div>
-        <div>
-          <input
+        <div class="cart-item-amount-wrap">
+          <div class="toggle-group">
+            <button @click="addToCart(item)" class="toggle plus">+</button>
+            <input
             disabled
             class="cart-item-amount"
             type="number"
             :value="item.amount"
           />
-          <div class="toggle-group">
-            <button @click="addToCart(item)" class="toggle">+</button>
             <button @click="removeFromCart(item)" class="toggle">-</button>
           </div>
         </div>
       </div>
+      <div class="total">
       Total: ${{ total }}
+      </div>
       <g-link to="/checkout" class="check-out">Checkout</g-link>
     </div>
   </div>
