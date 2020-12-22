@@ -1,17 +1,17 @@
 <template>
   <div class="item">
-    <bgl-image :image="product.mainImageGallery[0]" class="item-image" />
+    <bgl-image :image="product.image" class="item-image" />
     <img />
     <div class="item-txt-box">
       <p class="item-price">
         <span class="small-price">$</span>{{ product.price }}
       </p>
       <p class="item-name">{{ product.title }}</p>
-      <p class="small-txt">
-        {{ product.description }}
-      </p>
+      <div class="small-txt" v-html="product.description"></div>
     </div>
-    <g-link to="/product" class="btn-add">Add to Cart</g-link>
+    <g-link :to="'/product/' + product.slug" class="btn-add"
+      >Go to product</g-link
+    >
   </div>
 </template>
 
@@ -22,8 +22,5 @@ export default {
   components: { bglImage },
   name: "product",
   props: { product: Object },
-  mounted() {
-    console.log(this.product);
-  },
 };
 </script>

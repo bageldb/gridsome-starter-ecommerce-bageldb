@@ -50,11 +50,13 @@
         node{
           _id
           title
-          mainImageGallery{
+          slug
+          image{
             imageURL
             altText
           }
           price
+          description
         }
       }
     }

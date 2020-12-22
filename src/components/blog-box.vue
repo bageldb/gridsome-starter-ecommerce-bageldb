@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-box">
+  <g-link :to="'blog/' + slug" class="blog-box">
     <img class="blog-img" :src="image" />
     <div class="white-card">
       <p class="blog-big-txt">
@@ -9,7 +9,7 @@
         {{ description }}
       </p>
     </div>
-  </div>
+  </g-link>
 </template>
 
 <script>

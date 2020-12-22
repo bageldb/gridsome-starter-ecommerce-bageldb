@@ -4,9 +4,12 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import vClickOutside from 'v-click-outside'
 import bglImage from "./components/bgl-image.vue";
-
-export default function (Vue, { router, head, isClient }) {
+import vuex from 'vuex'
+import store from './store/index'
+export default function (Vue, {appOptions, router, head, isClient }) {
   // Set default layout as a global component
+  Vue.use(vuex);
+  appOptions.store = new vuex.Store(store);
   Vue.component('bgl-image',bglImage)
   Vue.component('Layout', DefaultLayout)
   Vue.use(vClickOutside)

@@ -1,8 +1,18 @@
 [
     {
-        "name":"products"
+        "name":"products",
+        "template":{
+            "path":"product",
+            "component":"product",
+            "friendlyURL":"slug"
+        }
     },
     {
-        "name":"categories"
+        "name":"categories",
+        "template":{
+            "path":"category",
+            "component":"category",
+            "friendlyURL":"categoryName"
+        }
     }
 ]

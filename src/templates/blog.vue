@@ -18,7 +18,7 @@
     </div>
     <div class="more-items-sec">
       <div class="_1200 items">
-        <p class="smaller-head space">You may also want</p>
+        <p class="smaller-head space">Related Items</p>
         <product
           v-for="edge in $page.allProducts.edges"
           :key="edge.node._id"
@@ -31,7 +31,7 @@
 
 <page-query>
 query($id: ID!) {
-    product:products(id: $id) {
+    blog:blogs(id: $id) {
       _id
       title
       price
@@ -42,7 +42,7 @@ query($id: ID!) {
       }
     }
 
-  allProducts(limit:3,filter: { id: { ne: $id}}){
+  allBlogs(limit:3, filter: { id: { ne: $id}}){
     edges {
       node {
         slug
