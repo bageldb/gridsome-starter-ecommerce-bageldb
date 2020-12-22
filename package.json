@@ -1,6 +1,6 @@
 {
-  "name": "ecommerece",
-  "private": true,
+  "name": "bageldb_ecommerece",
+  "private": false,
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
