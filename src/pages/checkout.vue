@@ -21,6 +21,8 @@
         <label>
           <textarea placeholder="Address" class="inputcheck" v-model="order.address"> </textarea>
         </label>
+        <div class="credit-card">Credit Card</div>
+
         <input class="checkbtn" type="submit" value="Send Order" />
       </form>
     </div>
