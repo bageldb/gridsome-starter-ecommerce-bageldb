@@ -56,13 +56,13 @@ _Nested under Orders_
 save tokens as environment variables `.env`
 
 1. `BAGEL_TOKEN` with power read access to all collections
-2. `GRIDSOME_POST_TOKEN` with write access only to: Newsletter Signups and Orders
+2. `GRIDSOME_POST_TOKEN` with write access only to: [Newsletter Signups](#newsletter-signups-newslettersignups) and [Orders](#orders-orders)
 
 ### 3. Install the Gridsome CLI tool if you don't have
 
 `npm install --global @gridsome/cli`
 
-### 3. Run the Gridsome project
+### 4. Run the Gridsome project
 
 1. `npm i` to install the dependancies
 2. `gridsome develop` to start a local dev server
