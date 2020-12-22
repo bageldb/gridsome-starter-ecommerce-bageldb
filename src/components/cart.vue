@@ -33,9 +33,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import bglImage from "./bgl-image.vue";
 export default {
-  components: { bglImage },
   data() {
     return {
       open: false,

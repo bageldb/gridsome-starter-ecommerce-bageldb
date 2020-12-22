@@ -17,9 +17,7 @@
 
 
 <script>
-import bglImage from "./bgl-image.vue";
 export default {
-  components: { bglImage },
   name: "product",
   props: { product: Object },
 };

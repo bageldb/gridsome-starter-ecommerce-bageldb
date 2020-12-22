@@ -7,6 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@bageldb/vue-bgl-image": "^0.0.1",
     "@bageldb/bagel-db": "^0.2.19",
     "@bageldb/gridsome-pages": "0.0.17",
     "@bageldb/gridsome-source": "0.0.17",
