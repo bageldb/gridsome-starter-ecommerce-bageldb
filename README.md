@@ -1,6 +1,8 @@
 # Ecommerce Starter for BagelDB
 
-This is a starter
+This is a starter for Gridsome using [BagelDB](https://bageldb.com/)
+
+new around here? get started with [BagelDB docs](https://docs.bageldb.com/)
 
 ### 1. Create a BagelDB project
 
