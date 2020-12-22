@@ -1,10 +1,19 @@
 const collections = require('./collections.json');
 
 module.exports = {
-  siteName: 'Headless Beer Shop',
+  metaInfo(){
+    return {
+      siteName: 'Headless Beer Shop',
+      ...this.$ogp({
+        title: 'Ecommerce Starter',
+        description: 'BagelDB implementation of ecommerce on Gridsome',
+        image: '/images/cover.jpg',
+      })
+    }
+  },
   icon: {
-    favicon: './images/favicon.png',
-    touchicon: './images/touchicon.png'
+    favicon: '/images/favicon.png',
+    touchicon: '/images/touchicon.png'
   },
   plugins: [
     {

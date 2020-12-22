@@ -7,11 +7,12 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@bageldb/vue-bgl-image": "^0.0.1",
     "@bageldb/bagel-db": "^0.2.19",
     "@bageldb/gridsome-pages": "0.0.17",
     "@bageldb/gridsome-source": "0.0.17",
+    "@bageldb/vue-bgl-image": "^0.0.1",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-ogp": "0.0.14",
     "v-click-outside": "^3.1.2",
     "vuex": "^3.6.0"
   }

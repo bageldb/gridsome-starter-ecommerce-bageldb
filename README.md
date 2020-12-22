@@ -2,7 +2,9 @@
 
 This is a starter for Gridsome using [BagelDB](https://bageldb.com/)
 
-new around here? get started with [BagelDB docs](https://docs.bageldb.com/)
+Here's a live [Demo](https://gridsome-ecommerce.netlify.app/)🍺
+
+🥯 new around here? get started with [BagelDB docs](https://docs.bageldb.com/) 🥯
 
 ### 1. Create a BagelDB project
 
@@ -10,14 +12,14 @@ Get started with BagelDB and create your collections, here is the DB structure u
 
 #### Products `products`
 
-| Field Name  | Slug        | Type      | Options        |
-| ----------- | ----------- | --------- | -------------- |
-| Title       | title       | PlainText | primary:true   |
-| Image       | image       | Image     |                |
-| Price       | price       | Number    |                |
-| Description | description | RichText  |                |
-| Categories  | categories  | Reference | ref:categories |
-| Slug        | slug        | PlainText |                |
+| Field Name  | Slug        | Type      | Options                                  |
+| ----------- | ----------- | --------- | ---------------------------------------- |
+| Title       | title       | PlainText | primary:true                             |
+| Image       | image       | Image     |                                          |
+| Price       | price       | Number    |                                          |
+| Description | description | RichText  |                                          |
+| Categories  | categories  | Reference | ref:[categories](#categories-categories) |
+| Slug        | slug        | PlainText |                                          |
 
 #### Categories `categories`
 
@@ -38,11 +40,11 @@ Get started with BagelDB and create your collections, here is the DB structure u
 
 _Nested under Orders_
 
-| Field Name    | Slug         | Type      | Options      |
-| ------------- | ------------ | --------- | ------------ |
-| Product Title | productTitle | PlainText | primary:true |
-| Price         | price        | Number    |              |
-| Product       | product      | Reference | ref:products |
+| Field Name    | Slug         | Type      | Options                            |
+| ------------- | ------------ | --------- | ---------------------------------- |
+| Product Title | productTitle | PlainText | primary:true                       |
+| Price         | price        | Number    |                                    |
+| Product       | product      | Reference | ref:[products](#products-products) |
 
 #### Newsletter Signups `newsletterSignups`
 
